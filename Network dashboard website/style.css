@@ -1,0 +1,74 @@
+h1 {
+    color: #0077ff;
+    text-align: center;
+    margin-top: 20px;
+  }
+h2 {
+    margin-top: 0;
+    font-weight: normal;
+}
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.widget {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+    flex: 0 0 calc(33.33% - 40px);
+}
+.widget:hover {
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+}
+.value {
+    font-size: 30px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.unit {
+    font-size: 14px;
+    margin-top: 5px;
+    color: #888;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #3e8e41;
+}
+.widget-icon {
+    border-radius: 50%;
+    display: inline-block;
+    height: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
+    width: 40px;
+}
+
+/* Ping widget animation */
+.ping-result {
+transition: transform 0.5s ease;
+}
+
+.ping-result.slide-in {
+transform: translateX(0);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+.widget {
+    margin: 10px;
+}
+}

@@ -1,0 +1,7 @@
+﻿Name,Quantity,Component
+"U1",1," Arduino Uno R3"
+"R1",1,"220 Ω Resistor"
+"D1",1,"Red LED"
+"D2",1,"Blue LED"
+"PIR1",1,"-72.86406854132355 , -130.8997299143639 , -241.68979721084446 , -278.4840868754018  PIR Sensor"
+"DIST1, DIST2",2," Ultrasonic Distance Sensor"

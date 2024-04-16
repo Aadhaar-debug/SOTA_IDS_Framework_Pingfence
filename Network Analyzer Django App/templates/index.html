@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Login | My Django Project</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f5f5f5;
+		}
+
+		h1 {
+			color: #333;
+			text-align: center;
+			margin-top: 50px;
+		}
+
+		form {
+			margin: 0 auto;
+			width: 50%;
+			max-width: 400px;
+			padding: 20px;
+			background-color: #fff;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.2);
+			text-align: center;
+		}
+
+		label {
+			display: block;
+			margin-bottom: 10px;
+			color: #333;
+			text-align: left;
+		}
+
+		input[type=text], input[type=password], input[type=email], input[type=tel], input[type=number] {
+			width: 90%;
+			padding: 10px;
+			margin-bottom: 20px;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+		}
+
+		input[type=submit] {
+			background-color: #4CAF50;
+			color: #fff;
+			border: none;
+			padding: 10px;
+			border-radius: 3px;
+			cursor: pointer;
+		}
+
+		input[type=submit]:hover {
+			background-color: #45a049;
+		}
+	</style>
+</head>
+<body>
+	<h1>Login to Chakravyuh Dashboard</h1>
+	<form action="user">
+		<label for="username">Username</label>
+		<input type="text" id="username" name="username">
+
+        <label for="password">Password</label>
+		<input type="password" id="password" name="password">
+
+		<label for="email">Email</label>
+		<input type="email" id="email" name="email">
+
+		<label for="phone">Phone Number</label>
+		<input type="tel" id="phone" name="phone">
+
+		<label for="otp">One-Time Password</label>
+		<input type="number" id="otp" name="otp">
+
+		<input type="submit" value="Submit">
+	</form>
+</body>
+</html>

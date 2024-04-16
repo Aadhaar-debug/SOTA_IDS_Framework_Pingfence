@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Network Analyzer</title>
+<style>
+    h1 {
+        color: #0077ff;
+        text-align: center;
+        margin-top: 20px;
+      }
+    h2 {
+        margin-top: 0;
+        font-weight: normal;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+    .widget {
+        margin: 20px;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.2);
+        flex: 0 0 calc(33.33% - 40px);
+    }
+    .widget:hover {
+        box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.2);
+    }
+    .value {
+        font-size: 30px;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    .unit {
+        font-size: 14px;
+        margin-top: 5px;
+        color: #888;
+    }
+    button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    button:hover {
+        background-color: #3e8e41;
+    }
+    .widget-icon {
+        border-radius: 50%;
+        display: inline-block;
+        height: 40px;
+        margin-right: 10px;
+        vertical-align: middle;
+        width: 40px;
+    }
+
+    /* Ping widget animation */
+    .ping-result {
+    transition: transform 0.5s ease;
+    }
+
+    .ping-result.slide-in {
+    transform: translateX(0);
+    }
+
+    /* Responsive design */
+    @media (max-width: 600px) {
+    .widget {
+        margin: 10px;
+    }
+    }
+</style>
+</head>
+<body>
+<h1>Network Dashboard</h1>
+  <div class="widget">
+   
+    <p>
+      Status: <span id="network-status-text">Unknown</span><br />
+      <span id="network-status-icon">&#x231b;</span>
+    </p>
+<div class="container">
+    <div class="widget">
+        <h2>IP Address</h2>
+        <div id="ip" class="value"></div>
+        <div class="unit">Your public IP address</div>
+    </div>
+    <div class="widget">
+        <h2>Network Speed</h2>
+        <div id="speed" class="value"></div>
+        <div class="unit">Mbps</div>
+        <button id="speedtest-btn">Test Speed</button>
+    </div>
+    <div class="widget">
+        <h2>ISP</h2>
+        <div id="isp" class="value"></div>
+        <div class="unit">Your internet service provider</div>
+    </div>
+    <div class="widget">
+        <h2>Latency</h2>
+        <div id="latency" class="value"></div>
+        <div class="unit">ms</div>
+    </div>
+    <div class="widget">
+        <h2>Router</h2>
+        <div id="router" class="value"></div>
+        <div class="unit">Your router's IP address</div>
+    </div>
+    <div class="widget">
+        <h2>DNS</h2>
+        <div id="dns" class="value"></div>
+        <div class="unit">Your DNS server's IP address</div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/speedtest-net/dist/speedtest.js"></script>
+<script>
+    function pingHost() {
+        const host = document.getElementById("ping-host").value;
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://" + host, true);
+        xhr.timeout = 10000;
+        xhr.onload = function () 
+        {
+            const pingTime = new Date() - startTime;
+            const pingResult = document.getElementById("ping-result");
+            pingResult.innerHTML = "Ping time: " + pingTime + "ms";
+            pingResult.classList.add("slide-in");
+        };
+        xhr.onerror = function () 
+        {
+            document.getElementById("ping-result").innerHTML = "Ping failed";
+        };
+        const startTime = new Date();
+        xhr.send();
+        }
+
+        function measureNetworkSpeed() 
+        {
+            const startTime = performance.now();
+            const fileSize = 1; // 5MB file size for testing
+            fetch('https://example.com/file.bin', {
+              method: 'GET',
+              cache: 'no-cache',
+              headers: {
+                'Content-Type': 'application/octet-stream',
+                'Content-Length': `${fileSize}`
+              }
+            }).then(response => {
+              const endTime = performance.now();
+              const duration = (endTime - startTime) / 1000; // convert to seconds
+              const speedMbps = (fileSize / duration / 1024 / 1024 * 8).toFixed(2); // calculate Mbps
+              document.getElementById("download-speed").innerHTML = speedMbps + " Mbps";
+            }).catch(error => {
+              console.log(error);
+            });
+          }
+          
+
+        function checkNetworkStatus() {
+        const statusIcon = document.getElementById("network-status-icon");
+        const statusText = document.getElementById("network-status-text");
+        if (navigator.onLine) {
+            statusIcon.innerHTML = "&#x2714";
+            statusIcon.style.color = "#1abc9c";
+        statusText.innerHTML = "Online";
+        } else {
+        statusIcon.innerHTML = "&#x2716;";
+        statusIcon.style.color = "#e74c3c";
+        statusText.innerHTML = "Offline";
+        }
+    }
+
+
+
+    // IP
+    var xhr = new XMLHttpRequest();
+	xhr.open('GET', 'https://api.ipify.org', true);
+	xhr.onload = function() {
+		if (this.status === 200) {
+			document.getElementById('ip').innerHTML = this.responseText;
+		}
+	};
+	xhr.send();
+
+	// ISP
+    var xhr2 = new XMLHttpRequest();
+    xhr2.open('GET', 'https://api.ipify.org/?format=json', true);
+    xhr2.onload = function() {
+        if (this.status === 200) {
+            var data = JSON.parse(this.responseText);
+            var ip = data.ip;
+            var xhr3 = new XMLHttpRequest();
+            xhr3.open('GET', 'https://ipwhois.app/json/' + ip, true);
+            xhr3.onload = function() {
+                if (this.status === 200) {
+                    var data2 = JSON.parse(this.responseText);
+                    document.getElementById('isp').innerHTML = data2.isp;
+                }
+            };
+            xhr3.send();
+        }
+    };
+    xhr2.send();
+
+
+	// Router
+	document.getElementById('router').innerHTML = location.hostname;
+
+	// DNS
+	var dns = 'example.com';
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'https://dns.google/resolve?name=' + dns, true);
+    xhr.onload = function() {
+    if (this.status === 200) {
+        var data = JSON.parse(this.responseText);
+        var ipAddress = data.Answer[0].data;
+        console.log('DNS: ' + ipAddress);
+        document.getElementById('dns').innerHTML = ipAddress;
+    }
+    };
+    xhr.send();
+
+
+	//speed
+    // Speed test
+    function measureNetworkSpeed() {
+    const startTime = Date.now();
+    const fileSize = 1024 * 1024 * 10; // 10 MB
+    const url = "https://speed.hetzner.de/10GB.bin"; // replace with your preferred file URL
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", url + "?r=" + Math.random(), true);
+    xhr.responseType = "arraybuffer";
+  
+    xhr.onload = function(e) {
+      const endTime = Date.now();
+      const duration = (endTime - startTime) / 1000;
+      const bitsLoaded = fileSize * 8;
+      const speedBps = bitsLoaded / duration;
+      const speedMbps = (speedBps / (1024 * 1024)).toFixed(2);
+      console.log("Download speed: " + speedMbps + " Mbps");
+      document.getElementById("speed").innerHTML = speedMbps;
+    };
+  
+    xhr.onerror = function(e) {
+      console.error("Error fetching file", e);
+    };
+  
+    xhr.send();
+  }
+  
+      
+
+    //latency
+	var xhr = new XMLHttpRequest();
+    var startTime, latency;
+
+    xhr.onreadystatechange = function() {
+    if (this.readyState === 4) {
+        var endTime = new Date().getTime();
+        latency = endTime - startTime;
+        console.log("Latency: " + latency + "ms");
+        document.getElementById("latency").innerHTML = latency + "ms";
+    }
+    };
+
+    startTime = new Date().getTime();
+    xhr.open("HEAD", "https://www.google.com", true);
+    xhr.send();
+
+    // Initialize widgets on page load
+    measureNetworkSpeed();
+    checkNetworkStatus();
+
+
+</script>
+</body>
+</html> 

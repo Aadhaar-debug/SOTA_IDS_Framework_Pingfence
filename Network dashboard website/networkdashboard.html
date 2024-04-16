@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Network Analyzer</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Network Dashboard</h1>
+  <div class="widget">
+   
+    <p>
+      Status: <span id="network-status-text">Unknown</span><br />
+      <span id="network-status-icon">&#x231b;</span>
+    </p>
+<div class="container">
+    <div class="widget">
+        <h2>IP Address</h2>
+        <div id="ip" class="value"></div>
+        <div class="unit">Your public IP address</div>
+    </div>
+    <div class="widget">
+        <h2>Network Speed</h2>
+        <div id="speed" class="value"></div>
+        <div class="unit">Mbps</div>
+        <button id="speedtest-btn">Test Speed</button>
+    </div>
+    <div class="widget">
+        <h2>ISP</h2>
+        <div id="isp" class="value"></div>
+        <div class="unit">Your internet service provider</div>
+    </div>
+    <div class="widget">
+        <h2>Latency</h2>
+        <div id="latency" class="value"></div>
+        <div class="unit">ms</div>
+    </div>
+    <div class="widget">
+        <h2>Router</h2>
+        <div id="router" class="value"></div>
+        <div class="unit">Your router's IP address</div>
+    </div>
+    <div class="widget">
+        <h2>DNS</h2>
+        <div id="dns" class="value"></div>
+        <div class="unit">Your DNS server's IP address</div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/speedtest-net/dist/speedtest.js"></script>
+<script src="script.js"></script>
+</body>
+</html> 
