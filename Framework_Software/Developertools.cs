@@ -31,5 +31,10 @@ namespace Pingfence
         {
 
         }
+
+        private void Developertools_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -32,6 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cloudconsole));
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button11 = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
@@ -47,11 +52,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.button11 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
@@ -88,6 +88,59 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Full Scan";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(228, 383);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(478, 36);
+            this.label3.TabIndex = 48;
+            this.label3.Text = "template to be assigned to devices.";
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.YellowGreen;
+            this.button11.Location = new System.Drawing.Point(361, 434);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(248, 65);
+            this.button11.TabIndex = 47;
+            this.button11.Text = "+ New Template";
+            this.button11.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.Location = new System.Drawing.Point(218, 347);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(500, 36);
+            this.label2.TabIndex = 46;
+            this.label2.Text = " It is used in Pingfence platform as a ";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.DimGray;
+            this.label10.Location = new System.Drawing.Point(167, 306);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(635, 36);
+            this.label10.TabIndex = 45;
+            this.label10.Text = "Template is a digital model of a physical object.";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(105, 237);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(746, 54);
+            this.label9.TabIndex = 44;
+            this.label9.Text = "Start by creating your first template";
             // 
             // tableLayoutPanel6
             // 
@@ -285,59 +338,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1221, 713);
             this.tableLayoutPanel1.TabIndex = 4;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.DimGray;
-            this.label10.Location = new System.Drawing.Point(167, 306);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(635, 36);
-            this.label10.TabIndex = 45;
-            this.label10.Text = "Template is a digital model of a physical object.";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(105, 237);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(746, 54);
-            this.label9.TabIndex = 44;
-            this.label9.Text = "Start by creating your first template";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(218, 347);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(500, 36);
-            this.label2.TabIndex = 46;
-            this.label2.Text = " It is used in Pingfence platform as a ";
-            // 
-            // button11
-            // 
-            this.button11.BackColor = System.Drawing.Color.YellowGreen;
-            this.button11.Location = new System.Drawing.Point(361, 434);
-            this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(248, 65);
-            this.button11.TabIndex = 47;
-            this.button11.Text = "+ New Template";
-            this.button11.UseVisualStyleBackColor = false;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(228, 383);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(478, 36);
-            this.label3.TabIndex = 48;
-            this.label3.Text = "template to be assigned to devices.";
             // 
             // Cloudconsole
             // 
