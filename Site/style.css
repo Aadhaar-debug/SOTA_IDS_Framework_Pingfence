@@ -1,0 +1,421 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    background-color: #252525;
+    color: #fff;
+    text-align: center;
+}
+
+
+
+
+
+/* Additional styles for responsiveness */
+/* You can add more styles for different screen sizes if needed */
+
+
+
+
+/* Some dummy styles for demonstration purposes */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    height:1000vh;
+    background-color: #252525;
+}
+
+h1 {
+    color: #333;
+}
+
+.content
+{
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height:100vh;
+    background-color: #252525;
+}
+
+.navbarcontents
+{
+    margin-left: 2vh;
+    font-size: 26px;
+}
+.toppiccontent2
+{
+    margin-left: 11vh;
+}
+
+.toppiccontent
+{
+    font-size: 70px;
+    color: white;
+    margin-left: 10vh;
+}
+
+
+.custom-button {
+    background-color: rgb(176, 211, 36);
+    
+    border-radius: 9999px; /* Large value to ensure rounded corners */
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 1rem; /* Adjust font size as needed */
+    text-align: center;
+    width:20vh;
+    margin-left: 11vh;
+    margin-top: 2vh;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+.custom-button1 {
+    background-color:white;
+    border-radius: 9999px; /* Large value to ensure rounded corners */
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 1rem; /* Adjust font size as needed */
+    text-align: center;
+    width:20vh;
+    margin-left: 11vh;
+    margin-top: 2vh;
+    color:  rgb(176, 211, 36);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.custom-button:hover {
+    background-color: white;
+    color: rgb(187,234,0);
+}
+.custom-button1:hover {
+    background-color: rgb(187,234,0);
+    color: white;
+}
+
+
+.subscriptioncards
+{
+    height:65vh;
+    width:40vh;
+    background-color: grey;
+    margin-left: 4%;
+    margin-top: 3%;
+    border-radius: 50px;
+    transition: 1s;
+    display: flex;align-items: center;justify-content: center;
+}
+
+.subscriptioncards1
+{
+    height:65vh;
+    width:40vh;
+    background-color: grey;
+    margin-top: 3%;
+    border-radius: 50px;
+    transition: 1s;
+    display: flex;align-items: center;justify-content: center;
+}
+
+.subscriptioncards:hover
+{
+    height:68vh;
+    width:43vh;
+    background-color: rgb(222, 222, 222);
+    transition: 1s;
+    
+}
+.subscriptioncards1:hover
+{
+    height:68vh;
+    width:43vh;
+    background-color: rgb(222, 222, 222);
+    transition: 1s;
+    
+}
+.subcards
+{
+    height:15vh;
+    width: 100%;
+    background-color: rgb(153, 187, 16);
+    display: flex;
+    margin-bottom: 53vh;
+    border-radius: 50px;
+
+}
+
+.togglebar
+{
+    width:103vh;
+    height: 10vh;
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10vh;
+    border-radius: 50px;
+    transition: 1s;
+}
+.togglebar:hover{
+    background-color:grey ;
+    transition: 1s;
+    width:110vh;
+    height: 12vh;
+}
+
+.togglebarcontent
+{
+    background-color: white ;
+    height: 6vh;
+    width: 30vh;
+    border-radius: 50px;
+    transition: 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.togglebarcontent:hover{
+    background-color:rgb(131, 161, 12);
+    transition: 1s;
+}
+
+.picturecardholdercontainer
+{
+    background-color: grey;width: 100%;display: flex;align-items: center ;margin-top: 10vh;
+}
+
+.picturecardholder
+{
+    display: flex;margin-top: 5vh ; margin-bottom: 5vh;width: 100%;height:50vh;
+}
+
+.pictuirecard
+{
+    height:50vh;
+    width:50vh;
+    background-color: white;
+    margin-left: 20vh;
+    border-radius: 50px;
+    transition: 1s;
+}
+.pictuirecard:hover
+{
+    height:53vh;
+    width:53vh;
+    transition: 1s;
+
+}
+
+.usedin
+{
+    font-family: 'Inter'
+    , sans-serif; color:white ; 
+    font-size: 30px;
+     display: flex; 
+     align-items: center;
+     justify-content: center;
+     margin-top: 8vh;
+}
+.latrgetext1
+{
+    color: white;font-size: 40px; display: flex;align-items: center;justify-content: center; margin-top: 10vh;height: 20px;
+}
+.increasingnumber
+{
+    display: flex;width: 100%;align-items: center;justify-content: space-between;
+}
+.increasingnumbertext
+{
+    color: white;font-size: 20px;
+}
+.latrgetext2
+{
+    color: white;font-size: 20px; display: flex;align-items: center;justify-content: center;   
+}
+.carousel-container {
+    width: 80%;
+    margin: 0 auto;
+    margin-top:20vh;
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+  }
+  
+  .carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .review {
+    width: calc(100% / 3); /* Set width to one-third of the container */
+    flex: 0 0 auto; /* Ensure the width of each review is fixed */
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-right: 20px;
+  }
+  
+  .quote {
+    font-style: italic;
+  }
+  
+  .author {
+    text-align: right;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  .ceocontainer {
+    max-width: 600px;
+    margin-left:30% ;
+    margin-top:20vh ;
+    text-align: center;
+}
+.fotter-container
+{
+    margin-top: 20vh;
+    bottom: 0;
+    height:200vh;
+    background-color: grey;
+    width: 100%;
+}
+  
+
+
+@media screen and (max-width: 700px) {
+    .toppiccontent
+    {
+        font-size: 60px;
+        margin-left: 2%;
+    }
+    .toppiccontent2
+    {
+        margin-left: 2vh;
+    }
+    .toppicbuttons
+    {
+        display: flex;
+    }
+    .custom-button
+    {
+        margin-left: 1vh;
+    }
+    .usedin
+    {
+        font-size: 18px;
+    }
+    .latrgetext1
+    {
+        font-size: 26px;
+    }
+    .increasingnumber
+    {
+        font-size: 25px;
+    }
+    .increasingnumbertext
+    {
+       display: flex;
+       align-items: center;
+       justify-content: center;
+       font-size: 10px;
+    }
+    .latrgetext2
+    {
+        font-size: 14px;
+    }
+    .subscriptioncards1
+    {
+        height: 30vh;
+        margin-bottom: 30vh;
+    }
+    .subscriptioncards
+    {
+        height: 30vh;
+        margin-bottom: 30vh;
+    }
+    .subscriptioncards1:hover
+    {
+        height: 30vh;
+        margin-bottom: 30vh;
+    }
+    .subscriptioncards:hover
+    {
+        height: 30vh;
+        margin-bottom: 30vh;
+    }
+    .subcards
+    {
+        margin-bottom: 20vh;
+        height: 10vh;
+    }
+    .companyname {
+        display: none; /* Hide company name on smaller screens */
+    }
+    .companylogo {
+        height: 45px;
+        margin-top: 2vh;
+    }
+    .navbarcontentholder
+    {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        margin-right: 10px;
+    }
+    .navbarcontents
+    {
+        font-size: 17px;
+    }
+    .togglebar
+    {
+        width: 70%;
+    }
+    .togglebar:hover
+    {
+        width: 90%;
+    }
+    .togglebarcontent
+    {
+        width: 120px;
+    }
+    .picturecardholdercontainer
+    {
+        background-color: grey;width: 100%;height:500px;display: flex;align-items: center ;margin-top: 20vh;;
+    }
+
+    .picturecardholder
+    {
+        display: flex;margin-top: 5vh ; margin-bottom: 5vh;width: 100%;height:50vh;
+    }
+    .pictuirecard
+    {
+        height:35vh;
+        width:35vh;
+        background-color: white;
+        margin-top: 6vh;
+        margin-left: 5vh;
+        border-radius: 50px;
+        transition: 1s;
+    }
+    .pictuirecard:hover
+    {
+        height:35vh;
+        width:35vh;
+        background-color: white;
+        margin-top: 6vh;
+        margin-left: 5vh;
+        border-radius: 50px;
+        transition: 1s;
+    }
+ 
+
+
+}
+
+
