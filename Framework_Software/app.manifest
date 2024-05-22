@@ -1,0 +1,56 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.IO;
+using System.Reflection;
+
+namespace Pingfence
+{
+    public partial class app : Form
+    {
+        public app()
+        {
+            InitializeComponent();
+
+            // Load the embedded manifest resource
+            LoadManifest();
+        }
+
+        private void LoadManifest()
+        {
+            // Read the content of the manifest file
+            string manifestContent = Properties.Resources.Manifest;
+
+            // Create a temporary manifest file
+            string tempManifestPath = Path.Combine(Path.GetTempPath(), "app.manifest");
+
+            // Write the manifest content to the temporary file
+            File.WriteAllText(tempManifestPath, manifestContent);
+
+            // Set the application manifest
+            SetApplicationManifest(tempManifestPath);
+        }
+
+        private void SetApplicationManifest(string manifestPath)
+        {
+            // Set the application manifest
+            if (File.Exists(manifestPath))
+            {
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.EnableVisualStyles();
+                Application.SetUnhandledExceptionMode(UnhandledExceptionMode.ThrowException);
+                Application.Run(new app());
+            }
+            else
+            {
+                MessageBox.Show("Manifest file not found.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+    }
+}

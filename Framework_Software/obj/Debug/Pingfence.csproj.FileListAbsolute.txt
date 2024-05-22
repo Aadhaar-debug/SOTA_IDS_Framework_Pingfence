@@ -78,3 +78,4 @@ C:\Users\acer\Desktop\SOTA_IDS_Framework_Pingfence\Framework_Software\obj\Debug\
 C:\Users\acer\Desktop\SOTA_IDS_Framework_Pingfence\Framework_Software\obj\Debug\Pingfence.application
 C:\Users\acer\Desktop\SOTA_IDS_Framework_Pingfence\Framework_Software\obj\Debug\Pingfence.exe
 C:\Users\acer\Desktop\SOTA_IDS_Framework_Pingfence\Framework_Software\obj\Debug\Pingfence.pdb
+C:\Users\acer\Desktop\SOTA_IDS_Framework_Pingfence\Framework_Software\obj\Debug\Pingfence.Users.resources

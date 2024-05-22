@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -17,25 +18,83 @@ namespace Pingfence
             InitializeComponent();
         }
 
+    
         private void button1_Click(object sender, EventArgs e)
         {
             timer1.Enabled = true;
             timer1.Interval = 1000;
             pictureBox1.Visible = true;
+
+            // Perform the thorough scan and display verbose output
+            PerformThoroughScan();
         }
+
+        private void PerformThoroughScan()
+        {
+            // Command for running Windows Defender scan for malicious processes
+            string command = "/c \"%ProgramFiles%\\Windows Defender\\MpCmdRun.exe\" -Scan -ScanType 3";
+
+            // Set up the process to run with administrative privileges
+            ProcessStartInfo processInfo = new ProcessStartInfo
+            {
+                FileName = "cmd.exe",
+                Arguments = command,
+                RedirectStandardOutput = true,
+                RedirectStandardError = true,
+                UseShellExecute = false,
+                CreateNoWindow = true,
+                Verb = "runas" // Run the process as administrator
+            };
+
+            Process process = new Process
+            {
+                StartInfo = processInfo
+            };
+
+            process.OutputDataReceived += (s, ev) =>
+            {
+                if (ev.Data != null)
+                {
+                    this.Invoke((MethodInvoker)delegate
+                    {
+                        richTextBox2.AppendText(ev.Data + Environment.NewLine);
+                    });
+                }
+            };
+
+            process.ErrorDataReceived += (s, ev) =>
+            {
+                if (ev.Data != null)
+                {
+                    this.Invoke((MethodInvoker)delegate
+                    {
+                        richTextBox2.AppendText("ERROR: " + ev.Data + Environment.NewLine);
+                    });
+                }
+            };
+
+            process.Start();
+            process.BeginOutputReadLine();
+            process.BeginErrorReadLine();
+        }
+
+
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             progressBar1.Increment(1);
             progressBar2.Increment(1);
-            if (progressBar1.Value == 100 & progressBar2.Value == 100)
+
+            // Check if both progress bars reach 100%
+            if (progressBar1.Value == 100 && progressBar2.Value == 100)
             {
                 timer1.Stop();
                 MessageBox.Show("Scan Complete", "Confirmation", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 pictureBox1.Visible = false;
-
             }
         }
+
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
