@@ -104,6 +104,12 @@
     <Compile Include="Devices.Designer.cs">
       <DependentUpon>Devices.cs</DependentUpon>
     </Compile>
+    <Compile Include="Firewall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Firewall.Designer.cs">
+      <DependentUpon>Firewall.cs</DependentUpon>
+    </Compile>
     <Compile Include="FullScan.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,11 +172,23 @@
     <Compile Include="test1.Designer.cs">
       <DependentUpon>test1.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserInputForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInputForm.Designer.cs">
+      <DependentUpon>UserInputForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Users.Designer.cs">
       <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UsersAnalytics.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UsersAnalytics.Designer.cs">
+      <DependentUpon>UsersAnalytics.cs</DependentUpon>
     </Compile>
     <Compile Include="UtilityTools.cs">
       <SubType>Form</SubType>
@@ -198,6 +216,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Developertools.resx">
       <DependentUpon>Developertools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Firewall.resx">
+      <DependentUpon>Firewall.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FullScan.resx">
       <DependentUpon>FullScan.cs</DependentUpon>
@@ -235,8 +256,14 @@
     <EmbeddedResource Include="test1.resx">
       <DependentUpon>test1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserInputForm.resx">
+      <DependentUpon>UserInputForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Users.resx">
       <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersAnalytics.resx">
+      <DependentUpon>UsersAnalytics.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UtilityTools.resx">
       <DependentUpon>UtilityTools.cs</DependentUpon>

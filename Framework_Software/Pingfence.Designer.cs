@@ -180,14 +180,14 @@
             // 
             // button9
             // 
-            this.button9.BackColor = System.Drawing.Color.Silver;
+            this.button9.BackColor = System.Drawing.Color.DarkGray;
             this.button9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button9.Location = new System.Drawing.Point(10, 428);
             this.button9.Margin = new System.Windows.Forms.Padding(10);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(192, 49);
             this.button9.TabIndex = 8;
-            this.button9.Text = "Firewall";
+            this.button9.Text = "Vulnerability Scanner";
             this.button9.UseVisualStyleBackColor = false;
             this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
@@ -219,14 +219,14 @@
             // 
             // button13
             // 
-            this.button13.BackColor = System.Drawing.Color.Silver;
+            this.button13.BackColor = System.Drawing.Color.Transparent;
             this.button13.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button13.Location = new System.Drawing.Point(10, 226);
             this.button13.Margin = new System.Windows.Forms.Padding(10);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(192, 48);
             this.button13.TabIndex = 5;
-            this.button13.Text = "Vulnerability Scanner";
+            this.button13.Text = "Firewall";
             this.button13.UseVisualStyleBackColor = false;
             this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
@@ -278,6 +278,7 @@
             this.label23.Size = new System.Drawing.Size(75, 16);
             this.label23.TabIndex = 4;
             this.label23.Text = "©Pingfence";
+            this.label23.Click += new System.EventHandler(this.label23_Click);
             // 
             // panel2
             // 
@@ -309,6 +310,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.7451F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(996, 41);
             this.tableLayoutPanel3.TabIndex = 1;
+            this.tableLayoutPanel3.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel3_Paint_2);
             // 
             // label5
             // 
@@ -321,6 +323,7 @@
             this.label5.Size = new System.Drawing.Size(65, 26);
             this.label5.TabIndex = 6;
             this.label5.Text = "Extension";
+            this.label5.Click += new System.EventHandler(this.label5_Click_1);
             // 
             // tableLayoutPanel4
             // 
@@ -334,7 +337,7 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 336F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 171F));
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 37F));
             this.tableLayoutPanel4.Controls.Add(this.label7, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.label11, 0, 0);
             this.tableLayoutPanel4.Controls.Add(this.label12, 0, 0);
@@ -352,41 +355,45 @@
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(857, 35);
             this.tableLayoutPanel4.TabIndex = 2;
+            this.tableLayoutPanel4.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel4_Paint_3);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(155, 12);
+            this.label7.Location = new System.Drawing.Point(154, 12);
             this.label7.Margin = new System.Windows.Forms.Padding(1, 12, 0, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 23);
             this.label7.TabIndex = 12;
             this.label7.Text = "Window";
+            this.label7.Click += new System.EventHandler(this.label7_Click_1);
             // 
             // label11
             // 
             this.label11.AutoSize = true;
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(200, 12);
+            this.label11.Location = new System.Drawing.Point(199, 12);
             this.label11.Margin = new System.Windows.Forms.Padding(1, 12, 0, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(36, 16);
             this.label11.TabIndex = 11;
             this.label11.Text = "Help";
+            this.label11.Click += new System.EventHandler(this.label11_Click_1);
             // 
             // label12
             // 
             this.label12.AutoSize = true;
             this.label12.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(277, 12);
+            this.label12.Location = new System.Drawing.Point(276, 12);
             this.label12.Margin = new System.Windows.Forms.Padding(1, 12, 0, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(335, 23);
             this.label12.TabIndex = 10;
             this.label12.Text = "Analyze";
+            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label13
             // 
@@ -396,38 +403,41 @@
             this.label13.Location = new System.Drawing.Point(1, 12);
             this.label13.Margin = new System.Windows.Forms.Padding(1, 12, 0, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(60, 23);
+            this.label13.Size = new System.Drawing.Size(59, 23);
             this.label13.TabIndex = 9;
             this.label13.Text = "View";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // label14
             // 
             this.label14.AutoSize = true;
             this.label14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(62, 12);
+            this.label14.Location = new System.Drawing.Point(61, 12);
             this.label14.Margin = new System.Windows.Forms.Padding(1, 12, 0, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(33, 23);
             this.label14.TabIndex = 8;
             this.label14.Text = "Search";
+            this.label14.Click += new System.EventHandler(this.label14_Click_1);
             // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(96, 12);
+            this.label15.Location = new System.Drawing.Point(95, 12);
             this.label15.Margin = new System.Windows.Forms.Padding(1, 12, 0, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(58, 23);
             this.label15.TabIndex = 7;
             this.label15.Text = "File";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(823, 3);
+            this.pictureBox5.Location = new System.Drawing.Point(822, 3);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(28, 27);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -439,7 +449,7 @@
             // 
             this.pictureBox6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
-            this.pictureBox6.Location = new System.Drawing.Point(785, 2);
+            this.pictureBox6.Location = new System.Drawing.Point(784, 2);
             this.pictureBox6.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(33, 31);
@@ -451,7 +461,7 @@
             // pictureBox11
             // 
             this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
-            this.pictureBox11.Location = new System.Drawing.Point(612, 0);
+            this.pictureBox11.Location = new System.Drawing.Point(611, 0);
             this.pictureBox11.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(171, 35);
@@ -540,6 +550,7 @@
             this.pictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox12.TabIndex = 21;
             this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
             // 
             // label18
             // 
@@ -551,6 +562,7 @@
             this.label18.Size = new System.Drawing.Size(257, 20);
             this.label18.TabIndex = 20;
             this.label18.Text = "Install Pingfence on a new device";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // label17
             // 
@@ -562,6 +574,7 @@
             this.label17.Size = new System.Drawing.Size(481, 25);
             this.label17.TabIndex = 19;
             this.label17.Text = "You can protect 2 more devices with your subscription.";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // panel7
             // 
@@ -574,6 +587,7 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(263, 120);
             this.panel7.TabIndex = 18;
+            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // pictureBox22
             // 
@@ -584,6 +598,7 @@
             this.pictureBox22.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox22.TabIndex = 27;
             this.pictureBox22.TabStop = false;
+            this.pictureBox22.Click += new System.EventHandler(this.pictureBox22_Click);
             // 
             // label4
             // 
@@ -606,6 +621,7 @@
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 25;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_4);
             // 
             // pictureBox8
             // 
@@ -629,6 +645,7 @@
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(263, 120);
             this.panel6.TabIndex = 15;
+            this.panel6.Paint += new System.Windows.Forms.PaintEventHandler(this.panel6_Paint);
             // 
             // pictureBox19
             // 
@@ -639,6 +656,7 @@
             this.pictureBox19.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox19.TabIndex = 25;
             this.pictureBox19.TabStop = false;
+            this.pictureBox19.Click += new System.EventHandler(this.pictureBox19_Click);
             // 
             // pictureBox16
             // 
@@ -649,6 +667,7 @@
             this.pictureBox16.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox16.TabIndex = 24;
             this.pictureBox16.TabStop = false;
+            this.pictureBox16.Click += new System.EventHandler(this.pictureBox16_Click);
             // 
             // label8
             // 
@@ -684,6 +703,7 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(263, 120);
             this.panel8.TabIndex = 17;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
             // 
             // pictureBox21
             // 
@@ -694,6 +714,7 @@
             this.pictureBox21.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox21.TabIndex = 8;
             this.pictureBox21.TabStop = false;
+            this.pictureBox21.Click += new System.EventHandler(this.pictureBox21_Click);
             // 
             // label16
             // 
@@ -727,6 +748,7 @@
             this.pictureBox15.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox15.TabIndex = 26;
             this.pictureBox15.TabStop = false;
+            this.pictureBox15.Click += new System.EventHandler(this.pictureBox15_Click);
             // 
             // panel9
             // 
@@ -738,6 +760,7 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(263, 120);
             this.panel9.TabIndex = 16;
+            this.panel9.Paint += new System.Windows.Forms.PaintEventHandler(this.panel9_Paint);
             // 
             // pictureBox20
             // 
@@ -748,6 +771,7 @@
             this.pictureBox20.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox20.TabIndex = 6;
             this.pictureBox20.TabStop = false;
+            this.pictureBox20.Click += new System.EventHandler(this.pictureBox20_Click);
             // 
             // label6
             // 
@@ -782,6 +806,7 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(263, 120);
             this.panel5.TabIndex = 14;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // pictureBox18
             // 
@@ -792,6 +817,7 @@
             this.pictureBox18.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox18.TabIndex = 6;
             this.pictureBox18.TabStop = false;
+            this.pictureBox18.Click += new System.EventHandler(this.pictureBox18_Click);
             // 
             // label3
             // 
@@ -826,6 +852,7 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(263, 120);
             this.panel4.TabIndex = 13;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint_1);
             // 
             // pictureBox17
             // 
@@ -836,6 +863,7 @@
             this.pictureBox17.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox17.TabIndex = 5;
             this.pictureBox17.TabStop = false;
+            this.pictureBox17.Click += new System.EventHandler(this.pictureBox17_Click);
             // 
             // label2
             // 
@@ -883,6 +911,7 @@
             this.label22.Size = new System.Drawing.Size(164, 20);
             this.label22.TabIndex = 24;
             this.label22.Text = "product has to offer. ";
+            this.label22.Click += new System.EventHandler(this.label22_Click);
             // 
             // label21
             // 
@@ -894,6 +923,7 @@
             this.label21.TabIndex = 23;
             this.label21.Text = " on your device usage and needs. This way you\'ll get to benefit from everything y" +
     "our ";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // label20
             // 
@@ -906,6 +936,7 @@
             this.label20.TabIndex = 22;
             this.label20.Text = "Global AI your personal security advisor , provides contextual recommendations ba" +
     "sed";
+            this.label20.Click += new System.EventHandler(this.label20_Click);
             // 
             // label19
             // 
@@ -917,6 +948,7 @@
             this.label19.Size = new System.Drawing.Size(236, 22);
             this.label19.TabIndex = 22;
             this.label19.Text = "Global AI Recommendations";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // pictureBox13
             // 
@@ -927,6 +959,7 @@
             this.pictureBox13.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox13.TabIndex = 0;
             this.pictureBox13.TabStop = false;
+            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
             // 
             // label10
             // 
@@ -938,6 +971,7 @@
             this.label10.Size = new System.Drawing.Size(574, 36);
             this.label10.TabIndex = 11;
             this.label10.Text = "We\'re looking out for your device and data";
+            this.label10.Click += new System.EventHandler(this.label10_Click_2);
             // 
             // label9
             // 
@@ -1003,7 +1037,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55.55556F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 44.44444F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 74F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 75F));
             this.tableLayoutPanel2.Controls.Add(this.pictureBox14, 1, 0);
             this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 42);
             this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
@@ -1012,12 +1046,13 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.Size = new System.Drawing.Size(200, 80);
             this.tableLayoutPanel2.TabIndex = 3;
+            this.tableLayoutPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel2_Paint_3);
             // 
             // pictureBox14
             // 
             this.pictureBox14.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox14.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox14.Image")));
-            this.pictureBox14.Location = new System.Drawing.Point(70, 0);
+            this.pictureBox14.Location = new System.Drawing.Point(69, 0);
             this.pictureBox14.Margin = new System.Windows.Forms.Padding(0);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(55, 80);
@@ -1036,6 +1071,7 @@
             this.label1.Size = new System.Drawing.Size(128, 16);
             this.label1.TabIndex = 2;
             this.label1.Text = "Pingfence v.2024.0.1";
+            this.label1.Click += new System.EventHandler(this.label1_Click_4);
             // 
             // tableLayoutPanel1
             // 

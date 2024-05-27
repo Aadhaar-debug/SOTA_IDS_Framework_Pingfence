@@ -55,5 +55,15 @@ namespace Pingfence
             // Show the Pingfence form
             developerstools.Show();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            // Create an instance of the Pingfence form
+            Users users = new Users();
+            this.Hide();
+            // Show the Pingfence form
+            users.Show();
+
+        }
     }
 }
