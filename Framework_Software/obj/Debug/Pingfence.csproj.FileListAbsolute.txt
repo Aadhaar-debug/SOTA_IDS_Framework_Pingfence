@@ -82,3 +82,7 @@ C:\Users\acer\Desktop\SOTA_IDS_Framework_Pingfence\Framework_Software\obj\Debug\
 C:\Users\acer\Desktop\SOTA_IDS_Framework_Pingfence\Framework_Software\obj\Debug\Pingfence.UserInputForm.resources
 C:\Users\acer\Desktop\SOTA_IDS_Framework_Pingfence\Framework_Software\obj\Debug\Pingfence.Firewall.resources
 C:\Users\acer\Desktop\SOTA_IDS_Framework_Pingfence\Framework_Software\obj\Debug\Pingfence.UsersAnalytics.resources
+C:\Users\acer\Desktop\SOTA_IDS_Framework_Pingfence\Framework_Software\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\acer\Desktop\SOTA_IDS_Framework_Pingfence\Framework_Software\bin\Debug\itextsharp.dll
+C:\Users\acer\Desktop\SOTA_IDS_Framework_Pingfence\Framework_Software\bin\Debug\itextsharp.xml
+C:\Users\acer\Desktop\SOTA_IDS_Framework_Pingfence\Framework_Software\obj\Debug\Pingfence.csproj.CopyComplete

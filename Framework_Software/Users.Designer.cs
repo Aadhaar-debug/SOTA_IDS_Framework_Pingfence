@@ -59,6 +59,8 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.textBox2 = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel6.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
@@ -68,6 +70,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panelButtons.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -139,9 +143,11 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Help";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button15
             // 
+            this.button15.BackColor = System.Drawing.Color.Silver;
             this.button15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button15.Location = new System.Drawing.Point(10, 356);
             this.button15.Margin = new System.Windows.Forms.Padding(10);
@@ -149,10 +155,12 @@
             this.button15.Size = new System.Drawing.Size(184, 49);
             this.button15.TabIndex = 7;
             this.button15.Text = "Devices";
-            this.button15.UseVisualStyleBackColor = true;
+            this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.Silver;
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button3.Location = new System.Drawing.Point(10, 291);
             this.button3.Margin = new System.Windows.Forms.Padding(10);
@@ -160,7 +168,8 @@
             this.button3.Size = new System.Drawing.Size(184, 45);
             this.button3.TabIndex = 6;
             this.button3.Text = "Location";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -172,6 +181,7 @@
             this.button4.TabIndex = 5;
             this.button4.Text = "Users";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -183,6 +193,7 @@
             this.button5.TabIndex = 4;
             this.button5.Text = "Developer Tools";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
@@ -207,6 +218,7 @@
             this.button8.TabIndex = 0;
             this.button8.Text = "Organizations";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // tableLayoutPanel7
             // 
@@ -321,6 +333,7 @@
             // 
             this.panelButtons.AutoScroll = true;
             this.panelButtons.BackColor = System.Drawing.Color.Silver;
+            this.panelButtons.Controls.Add(this.panel3);
             this.panelButtons.Location = new System.Drawing.Point(38, 300);
             this.panelButtons.Name = "panelButtons";
             this.panelButtons.Size = new System.Drawing.Size(920, 353);
@@ -414,6 +427,28 @@
             this.contextMenuStrip2.Name = "contextMenuStrip2";
             this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.YellowGreen;
+            this.panel3.Controls.Add(this.textBox2);
+            this.panel3.Location = new System.Drawing.Point(8, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(909, 38);
+            this.panel3.TabIndex = 0;
+            // 
+            // textBox2
+            // 
+            this.textBox2.BackColor = System.Drawing.Color.YellowGreen;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox2.Location = new System.Drawing.Point(53, 11);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(0);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(842, 15);
+            this.textBox2.TabIndex = 0;
+            this.textBox2.Text = "       Aadhaar               aadhaarkoul2002            Offline                  " +
+    "                           18:36                                                " +
+    "             Admin ";
+            // 
             // Users
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -436,6 +471,9 @@
             this.splitContainer1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panelButtons.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -471,5 +509,7 @@
         private System.Windows.Forms.Panel panelButtons;
         private System.Windows.Forms.Button btnRemove;
         private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Panel panel3;
     }
 }

@@ -28,14 +28,38 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Pingfence.exe" size="3702744">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="BouncyCastle.Crypto.dll" size="2609152">
+      <assemblyIdentity name="BouncyCastle.Crypto" version="1.8.9.0" publicKeyToken="0E99375E54769942" language="neutral" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>MzkDx9IqJwmORfxkt3omSqIgYFz70+MpwgDX5LQsiBw=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="itextsharp.dll" size="2592768">
+      <assemblyIdentity name="itextsharp" version="5.5.13.3" publicKeyToken="8354AE6D2174DDCA" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>zloQfa1DpBAe6z/oT/bRc6bVXzTwv/cltTY2bxDplBA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Pingfence.exe" size="3731928">
       <assemblyIdentity name="Pingfence" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>j/kyIBA4Ms6Crf4bzr63oS3lAcNzWsZEVylkaYWl5Gc=</dsig:DigestValue>
+        <dsig:DigestValue>vZPXC41NaKe5WmFBn/gMkIFPhD1of8inijmxNf+qAmw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

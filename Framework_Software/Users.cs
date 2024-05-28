@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -26,7 +27,10 @@ namespace Pingfence
 
         private void button6_Click(object sender, EventArgs e)
         {
-            // Event handler code for button6_Click (if needed)
+
+            Pingfence pingfence = new Pingfence();
+            this.Hide();
+            pingfence.Show();
         }
 
         private void btnRemove_Click(object sender, EventArgs e)
@@ -79,6 +83,57 @@ namespace Pingfence
             UsersAnalytics useranalytics = new UsersAnalytics();
             this.Hide();
             useranalytics.Show();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            // Display a MessageBox with the specified message
+            MessageBox.Show("Upgrade current plan to access this feature", "Upgrade Plan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // Display a MessageBox with the specified message
+            MessageBox.Show("Upgrade current plan to access this feature", "Upgrade Plan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            // Display a MessageBox with the specified message
+            MessageBox.Show("Upgrade current plan to access this feature", "Upgrade Plan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Developertools developertools = new Developertools();
+            this.Hide();
+            developertools.Show();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string url = "http://www.google.com";
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to open URL: " + ex.Message);
+            }
+
         }
     }
 }

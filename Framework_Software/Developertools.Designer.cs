@@ -195,9 +195,11 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Help";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button15
             // 
+            this.button15.BackColor = System.Drawing.Color.Silver;
             this.button15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button15.Location = new System.Drawing.Point(10, 347);
             this.button15.Margin = new System.Windows.Forms.Padding(10);
@@ -205,10 +207,12 @@
             this.button15.Size = new System.Drawing.Size(182, 49);
             this.button15.TabIndex = 7;
             this.button15.Text = "Devices";
-            this.button15.UseVisualStyleBackColor = true;
+            this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.Silver;
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button3.Location = new System.Drawing.Point(10, 282);
             this.button3.Margin = new System.Windows.Forms.Padding(10);
@@ -216,7 +220,8 @@
             this.button3.Size = new System.Drawing.Size(182, 45);
             this.button3.TabIndex = 6;
             this.button3.Text = "Location";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -228,6 +233,7 @@
             this.button4.TabIndex = 5;
             this.button4.Text = "Users";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button5
             // 
@@ -239,6 +245,7 @@
             this.button5.TabIndex = 4;
             this.button5.Text = "Developer Tools";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label1
             // 
@@ -290,6 +297,7 @@
             this.button6.TabIndex = 3;
             this.button6.Text = "Home";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button8
             // 
@@ -302,6 +310,7 @@
             this.button8.TabIndex = 0;
             this.button8.Text = "Organizations";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // tableLayoutPanel11
             // 

@@ -164,11 +164,6 @@ namespace Pingfence
             }
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void groupBox1_Enter(object sender, EventArgs e)
         {
 
@@ -239,6 +234,31 @@ namespace Pingfence
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+            // Display a message box asking the user if they are sure they want to quit
+            DialogResult result = MessageBox.Show("Are you sure you want to quit the program?", "Confirmation", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+
+            // Check the user's response
+            if (result == DialogResult.OK)
+            {
+                // If the user clicks OK, close the program
+                this.Close();
+            }
+            else
+            {
+                // If the user clicks Cancel, do nothing
+            }
+
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            // Minimize the application window
+            this.WindowState = FormWindowState.Minimized;
 
         }
     }

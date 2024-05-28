@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -64,6 +65,44 @@ namespace Pingfence
             // Show the Pingfence form
             users.Show();
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // Display a MessageBox with the specified message
+            MessageBox.Show("Upgrade current plan to access this feature", "Upgrade Plan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            // Display a MessageBox with the specified message
+            MessageBox.Show("Upgrade current plan to access this feature", "Upgrade Plan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            // Display a MessageBox with the specified message
+            MessageBox.Show("Upgrade current plan to access this feature", "Upgrade Plan", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string url = "http://www.google.com";
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = url,
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Failed to open URL: " + ex.Message);
+            }
         }
     }
 }

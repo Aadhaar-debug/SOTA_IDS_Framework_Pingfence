@@ -109,6 +109,7 @@
             this.button11.TabIndex = 47;
             this.button11.Text = "+ New Template";
             this.button11.UseVisualStyleBackColor = false;
+            this.button11.Click += new System.EventHandler(this.button11_Click);
             // 
             // label2
             // 
@@ -195,9 +196,11 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Help";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button15
             // 
+            this.button15.BackColor = System.Drawing.Color.Silver;
             this.button15.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button15.Location = new System.Drawing.Point(10, 351);
             this.button15.Margin = new System.Windows.Forms.Padding(10);
@@ -205,10 +208,12 @@
             this.button15.Size = new System.Drawing.Size(184, 49);
             this.button15.TabIndex = 7;
             this.button15.Text = "Devices";
-            this.button15.UseVisualStyleBackColor = true;
+            this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.Silver;
             this.button3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button3.Location = new System.Drawing.Point(10, 286);
             this.button3.Margin = new System.Windows.Forms.Padding(10);
@@ -216,7 +221,8 @@
             this.button3.Size = new System.Drawing.Size(184, 45);
             this.button3.TabIndex = 6;
             this.button3.Text = "Location";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 

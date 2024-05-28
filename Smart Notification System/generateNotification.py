@@ -15,7 +15,7 @@ spi.open(0, 0)
 spi.max_speed_hz = 1350000
 
 # Load the trained model
-model = joblib.load('threat_classifier.pkl')
+model = joblib.load('threat_classifier.h5')
 
 # ADC Channel where the surveillance module is connected
 adc_channel = 0
