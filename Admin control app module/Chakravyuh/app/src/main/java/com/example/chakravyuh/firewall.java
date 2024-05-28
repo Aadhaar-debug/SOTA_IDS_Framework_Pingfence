@@ -21,6 +21,7 @@ public class firewall extends AppCompatActivity {
         setContentView(R.layout.activity_firewall);
 
         imageview = findViewById(R.id.imageView4);
+        webView = findViewById(R.id.webView); // Ensure this ID matches your layout file
 
         imageview.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -21,6 +21,12 @@ namespace Pingfence
         private void button5_Click(object sender, EventArgs e)
         {
 
+            // Set the visibility of pictureBox1 to true
+            pictureBox1.Visible = true;
+
+            // Set the visibility of pictureBox2 to false
+            pictureBox2.Visible = false;
+
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
@@ -30,6 +36,7 @@ namespace Pingfence
 
         private void button1_Click(object sender, EventArgs e)
         {
+
             // Set the visibility of pictureBox1 to true
             pictureBox1.Visible = true;
 
@@ -37,7 +44,7 @@ namespace Pingfence
             pictureBox2.Visible = false;
         }
 
-        private async Task pictureBox1_ClickAsync(object sender, EventArgs e)
+        private async Task DisplayBlynkCloudData()
         {
             try
             {
@@ -54,7 +61,7 @@ namespace Pingfence
                     string responseData = await response.Content.ReadAsStringAsync();
 
                     // Display the data in a web browser control
-                    webBrowser1.DocumentText = responseData;
+                    webBrowser1.DocumentText = FormatAsHtml(responseData);
                 }
             }
             catch (Exception ex)
@@ -62,6 +69,13 @@ namespace Pingfence
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private string FormatAsHtml(string data)
+        {
+            // Basic HTML formatting to display JSON data
+            return $"<html><body><pre>{data}</pre></body></html>";
+        }
+
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
@@ -78,24 +92,44 @@ namespace Pingfence
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            {
-                // Set the visibility of pictureBox1 to true
-                pictureBox2.Visible = true;
-
-                // Set the visibility of pictureBox2 to false
-                pictureBox1.Visible = false;
-            }
-        }
-
         private void button4_Click(object sender, EventArgs e)
         {
             // Set the visibility of pictureBox1 to true
             pictureBox2.Visible = true;
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            // Set the visibility of pictureBox1 to true
+            pictureBox1.Visible = true;
+
             // Set the visibility of pictureBox2 to false
-            pictureBox1.Visible = false;
+            pictureBox2.Visible = false;
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            // Set the visibility of pictureBox1 to true
+            pictureBox1.Visible = true;
+
+            // Set the visibility of pictureBox2 to false
+            pictureBox2.Visible = false;
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+            // Set the visibility of pictureBox1 to true
+            pictureBox1.Visible = true;
+
+            // Set the visibility of pictureBox2 to false
+            pictureBox2.Visible = false;
+
         }
     }
 }
