@@ -1,57 +1,51 @@
-#include <ESP8266WiFi.h>
-#include <ESP8266HTTPClient.h>
+#include <Keyboard.h>
 
-const char* ssid = "DLINK-DIR650IN";
-const char* password = "******";
-const char* canaryTokenURL = "http://canarytokens.com/terms/9bwr841apv79vx8wisam2ux70/index.html";
+// GPIO pin definitions for ESP8266
+#define VRX_PIN A0      // Analog input
+#define VRY_PIN A1      // Analog input
 
 void setup() {
   Serial.begin(115200);
-  WiFi.begin(ssid, password);
-
-  while (WiFi.status() != WL_CONNECTED) {
-    delay(1000);
-    Serial.println("Connecting to WiFi...");
-  }
-
-  Serial.println("Connected to WiFi");
+  delay(2000); // Delay for serial monitor to initialize
+  Keyboard.begin(); // Initialize the keyboard
 }
 
 void loop() {
-  if (WiFi.status() == WL_CONNECTED) {
-    HTTPClient http;
+  // Read joystick values
+  int vrxValue = analogRead(VRX_PIN);
+  int vryValue = analogRead(VRY_PIN);
 
-    Serial.print("Checking Canarytoken: ");
-    Serial.println(canaryTokenURL);
+  // Determine joystick movement
+  String joystickDirection = getJoystickDirection(vrxValue, vryValue);
 
-    // http.begin(canaryTokenURL);
-    WiFiClient client;
-    http.begin(client, canaryTokenURL);  // Updated line
+  // Simulate key presses based on joystick direction
+  sendKeyboardCommand(joystickDirection);
 
-
-    int httpCode = http.GET();
-
-    if (httpCode > 0) {
-      if (httpCode == HTTP_CODE_OK) {
-        Serial.println("No intrusion detected");
-      } else {
-        Serial.println("Intrusion detected!");
-      }
-    } else {
-      Serial.printf("HTTP GET request failed, error: %s\n", http.errorToString(httpCode).c_str());
-    }
-
-    http.end();
-  }
-
-  delay(5000);  // Wait for 5 seconds before checking again
+  delay(100);
 }
 
+String getJoystickDirection(int x, int y) {
+  if (x < 100) {
+    return "LEFT";
+  } else if (x > 900) {
+    return "RIGHT";
+  } else if (y < 100) {
+    return "UP";
+  } else if (y > 900) {
+    return "DOWN";
+  } else {
+    return "CENTER";
+  }
+}
 
-
-
-
-
-
-
-
+void sendKeyboardCommand(String direction) {
+  if (direction == "LEFT") {
+    Keyboard.write(KEY_LEFT_ARROW); // Simulate pressing left arrow key
+  } else if (direction == "RIGHT") {
+    Keyboard.write(KEY_RIGHT_ARROW); // Simulate pressing right arrow key
+  } else if (direction == "UP") {
+    Keyboard.write(KEY_UP_ARROW); // Simulate pressing up arrow key
+  } else if (direction == "DOWN") {
+    Keyboard.write(KEY_DOWN_ARROW); // Simulate pressing down arrow key
+  }
+}
