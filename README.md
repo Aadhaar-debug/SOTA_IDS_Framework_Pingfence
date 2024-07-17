@@ -10,7 +10,13 @@ This commit ensures the end of repository maintainence and will no longer receiv
 - Any damage or faulty transactions made under the influence of the presented ids framework will not be Claimed by the authors or developers as the product is still in development and will not be marketted to business owners or institutions until approved by standard software testing agencies.
   
 ## CREDITS
-Many of the core components of this project were developed in collaboration with my (as in Aadhaar Koul's) teammates in the 6th semester of my computer science degree at MIET Jammu the developers being Arjun Charak , Baseer Fatima and  Navneet Kaur Who devoted their timeless efforts in developing many of the individual modules that create the entire of the digital product. I would also like to thank my Mentor Dr Arjun Puri Department of computer science and engineering whose valuable efforts and thoughts greatly influenced the vision and direction of the project.
+Many of the core components of this project were developed in collaboration with my (as in Aadhaar Koul's) teammates in the 6th semester of my computer science degree at MIET Jammu the developers being 
+
+- Arjun Charak
+- Baseer Fatima 
+- Navneet Kaur 
+
+Who devoted their timeless efforts in developing many of the individual modules that create the entire of the digital product. I would also like to thank my Mentor Dr Arjun Puri Department of computer science and engineering whose valuable efforts and thoughts greatly influenced the vision and direction of the project.
 
 ## ABSTRACT
 
