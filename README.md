@@ -1,4 +1,4 @@
-
+This commit ensures the end of repository maintainence and will no longer receive any further updates. I Thank all the collaboraters on the project namely, Baseer Fatima , Novneet Kour , and of Course Arjun Charak. Who Pushed me in tough times to develop this ground breaking product. Also i thank Dr. Arjun Puri (Teacher at Chitkara University ) who planted the idea in me for a SOTA IDS Framework. I wish the best for all the developers and hope they will continue to build exceptional products for a better tomorrow. THIS IS AADHAAR KOUL , ROLL NO - 2020A1R040 , 8th Semester , 2020 batch .............SIGNING OFF.
 
 # INTRUSION DETECTION FRAMEWORK IN HOME AUTOMATION SYSTEM USING SOTA THREAT MITIGATION TECHNIQUE
 "Protecting your home with the power of sight - our intrusion detection system sees everything, so you don't have to."
